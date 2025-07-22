@@ -19,6 +19,17 @@ config/icon="res://icon.svg"
 
 Events="*res://autoload/events.gd"
 
+[file_customization]
+
+folder_colors={
+"res://addons/": "red",
+"res://audio/": "orange",
+"res://autoload/": "yellow",
+"res://objects/": "green",
+"res://scenes/": "blue",
+"res://scripts/": "purple"
+}
+
 [input]
 
 jump={

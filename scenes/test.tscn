@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvgdqttjrvg1s"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://codrtii11iqw5" path="res://player/player_3d.tscn" id="2_bl13t"]
+[ext_resource type="PackedScene" uid="uid://codrtii11iqw5" path="res://objects/player/player_3d.tscn" id="2_bl13t"]
 
 [node name="Node3D" type="Node3D"]
 
