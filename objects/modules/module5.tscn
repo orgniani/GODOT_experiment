@@ -1,11 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://urka8ho68bnr"]
+[gd_scene load_steps=9 format=3 uid="uid://urka8ho68bnr"]
 
 [ext_resource type="Script" uid="uid://bdy41y71f0mir" path="res://scripts/module.gd" id="1_5avdq"]
 [ext_resource type="ArrayMesh" uid="uid://cu34sjirpgpco" path="res://art/models/module5.obj" id="2_clp3o"]
 [ext_resource type="Material" uid="uid://b84cwv5kxjjqs" path="res://art/materials/grey.tres" id="3_3j162"]
+[ext_resource type="ArrayMesh" uid="uid://csvkpe64e5nqi" path="res://art/models/floor_tile_large.obj" id="4_54kqv"]
+[ext_resource type="ArrayMesh" uid="uid://b806kqvjjx21o" path="res://art/models/wall.obj" id="5_465re"]
+[ext_resource type="Texture2D" uid="uid://dcj3pifh1e8is" path="res://art/models/dungeon_texture.png" id="5_myvsx"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_djxlb"]
 data = PackedVector3Array(-10, 0.2, -4.6667, -10, -0.2, -4.6667, -10, 0.2, -5, -10, 0.2, -5, -10, -0.2, -4.6667, -10, -0.2, -5, -10, 0.2, -5, -10, -0.2, -5, -4, 0.2, -5, -4, 0.2, -5, -10, -0.2, -5, -4, -0.2, -5, -4, 0.2, 4.6667, -4, -0.2, 4.6667, -4, 0.2, 5, -4, 0.2, 5, -4, -0.2, 4.6667, -4, -0.2, 5, -4, 0.2, 5, -4, -0.2, 5, -10, 0.2, 5, -10, 0.2, 5, -4, -0.2, 5, -10, -0.2, 5, -4, -0.2, 4.6667, -10, -0.2, 4.6667, -4, -0.2, 5, -4, -0.2, 5, -10, -0.2, 4.6667, -10, -0.2, 5, -4, 0.2, 5, -10, 0.2, 5, -4, 2, 5, -4, 2, 5, -10, 0.2, 5, -10, 2, 5, -10, 0.2, -4.6667, -10, 0.2, -5, -10, 2, -4.6667, -10, 2, -4.6667, -10, 0.2, -5, -10, 2, -5, -10, 0.2, -4.6667, -4, 0.2, -4.6667, -10, 0.2, 4.6667, -10, 0.2, 4.6667, -4, 0.2, -4.6667, -4, 0.2, 4.6667, -4, -0.2, -5, -10, -0.2, -5, -4, -0.2, -4.6667, -4, -0.2, -4.6667, -10, -0.2, -5, -10, -0.2, -4.6667, -4, -0.2, -4.6667, -10, -0.2, -4.6667, -4, -0.2, 4.6667, -4, -0.2, 4.6667, -10, -0.2, -4.6667, -10, -0.2, 4.6667, -4, 0.2, -5, -4, -0.2, -5, -4, 0.2, -4.6667, -4, 0.2, -4.6667, -4, -0.2, -5, -4, -0.2, -4.6667, -4, 0.2, -4.6667, -4, -0.2, -4.6667, -4, 0.2, 4.6667, -4, 0.2, 4.6667, -4, -0.2, -4.6667, -4, -0.2, 4.6667, -10, 0.2, 5, -10, -0.2, 5, -10, 0.2, 4.6667, -10, 0.2, 4.6667, -10, -0.2, 5, -10, -0.2, 4.6667, -10, 0.2, 4.6667, -10, -0.2, 4.6667, -10, 0.2, -4.6667, -10, 0.2, -4.6667, -10, -0.2, 4.6667, -10, -0.2, -4.6667, -10, 2, 4.6667, -4, 2, 4.6667, -10, 2, 5, -10, 2, 5, -4, 2, 4.6667, -4, 2, 5, -10, 0.2, 5, -10, 0.2, 4.6667, -10, 2, 5, -10, 2, 5, -10, 0.2, 4.6667, -10, 2, 4.6667, -10, 0.2, 4.6667, -4, 0.2, 4.6667, -10, 2, 4.6667, -10, 2, 4.6667, -4, 0.2, 4.6667, -4, 2, 4.6667, -4, 0.2, 4.6667, -4, 0.2, 5, -4, 2, 4.6667, -4, 2, 4.6667, -4, 0.2, 5, -4, 2, 5, -10, 2, -5, -4, 2, -5, -10, 2, -4.6667, -10, 2, -4.6667, -4, 2, -5, -4, 2, -4.6667, -4, 0.2, -4.6667, -10, 0.2, -4.6667, -4, 2, -4.6667, -4, 2, -4.6667, -10, 0.2, -4.6667, -10, 2, -4.6667, -4, 0.2, -5, -4, 0.2, -4.6667, -4, 2, -5, -4, 2, -5, -4, 0.2, -4.6667, -4, 2, -4.6667, -10, 0.2, -5, -4, 0.2, -5, -10, 2, -5, -10, 2, -5, -4, 0.2, -5, -4, 2, -5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wwda"]
+albedo_texture = ExtResource("5_myvsx")
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_5avdq")
@@ -18,5 +24,27 @@ shape = SubResource("ConcavePolygonShape3D_djxlb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+visible = false
 mesh = ExtResource("2_clp3o")
 surface_material_override/0 = ExtResource("3_3j162")
+
+[node name="Floor1" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1.55941, 0, 0, 0, 2.17964, 0, 0, 0, 1.24379, 0.0232052, 0.0584034, -2.49762)
+mesh = ExtResource("4_54kqv")
+skeleton = NodePath("../Floor2")
+surface_material_override/0 = SubResource("StandardMaterial3D_1wwda")
+
+[node name="Floor2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1.55941, 0, 0, 0, 2.17964, 0, 0, 0, 1.24379, 0.0330371, 0.0584038, 2.48974)
+mesh = ExtResource("4_54kqv")
+surface_material_override/0 = SubResource("StandardMaterial3D_1wwda")
+
+[node name="Wall1" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1.57139, 0, 0, 0, 1.32891, 0, 0, 0, 1, 0.0170822, 0, -4.94663)
+mesh = ExtResource("5_465re")
+surface_material_override/0 = SubResource("StandardMaterial3D_1wwda")
+
+[node name="Wall2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1.57139, 0, 0, 0, 1.32891, 0, 0, 0, 1, 0.0170822, 0, 4.94329)
+mesh = ExtResource("5_465re")
+surface_material_override/0 = SubResource("StandardMaterial3D_1wwda")
