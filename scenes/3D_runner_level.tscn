@@ -1,0 +1,41 @@
+[gd_scene load_steps=11 format=3 uid="uid://cgd0qkgnstuy0"]
+
+[ext_resource type="Script" uid="uid://i7qijnr78x25" path="res://scripts/scenes/3D_level.gd" id="1_rehyk"]
+[ext_resource type="PackedScene" uid="uid://urka8ho68bnr" path="res://objects/modules/module5.tscn" id="2_66kn4"]
+[ext_resource type="PackedScene" uid="uid://p71xwawyruxj" path="res://objects/modules/module1.tscn" id="3_3qm4x"]
+[ext_resource type="PackedScene" uid="uid://3sve2nrss2io" path="res://objects/modules/module2.tscn" id="4_qq2vc"]
+[ext_resource type="PackedScene" uid="uid://d2q8y0rtu2njt" path="res://objects/modules/module3.tscn" id="5_6bxg5"]
+[ext_resource type="PackedScene" uid="uid://c78ayj4g08730" path="res://objects/modules/module4.tscn" id="6_yk3cs"]
+[ext_resource type="PackedScene" uid="uid://b1ot6gn6tms6h" path="res://objects/lesson_reference/player_3d_template.tscn" id="7_66kn4"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_pl37p"]
+
+[sub_resource type="Sky" id="Sky_aqf0r"]
+sky_material = SubResource("PhysicalSkyMaterial_pl37p")
+
+[sub_resource type="Environment" id="Environment_jgbfd"]
+background_mode = 2
+sky = SubResource("Sky_aqf0r")
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.03
+
+[node name="main" type="Node3D"]
+
+[node name="Level" type="Node3D" parent="."]
+script = ExtResource("1_rehyk")
+modules = Array[PackedScene]([ExtResource("2_66kn4"), ExtResource("3_3qm4x"), ExtResource("4_qq2vc"), ExtResource("5_6bxg5"), ExtResource("6_yk3cs")])
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jgbfd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.702692, -0.656933, 0.273243, -0.0493662, 0.338099, 0.939815, -0.709779, -0.67389, 0.205149, 0, 0, 0)
+light_energy = 3.0
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.11738e-08, 0.0415443, -0.999137, -1.46767e-08, 0.999137, 0.0415443, 1, 1.63746e-08, -4.05285e-08, -10, 9.678, 0)
+current = true
+
+[node name="Player3DTemplate" parent="." instance=ExtResource("7_66kn4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.97117, 0, 0)
