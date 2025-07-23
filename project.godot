@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="experiment"
-run/main_scene="uid://dv7m0bqk3olw0"
+run/main_scene="uid://3yvh0melcdbm"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,6 +23,7 @@ Events="*res://autoload/events.gd"
 
 folder_colors={
 "res://addons/": "red",
+"res://art/": "gray",
 "res://audio/": "orange",
 "res://autoload/": "yellow",
 "res://objects/": "green",
