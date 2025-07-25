@@ -165,7 +165,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_whux2"]
-size = Vector2(29.375, 35.25)
+size = Vector2(29.375, 37.9982)
 
 [node name="Player2D" type="CharacterBody2D"]
 z_index = 1
@@ -174,13 +174,12 @@ script = ExtResource("1_1stpw")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_6wmvf")
-animation = &"jump"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.462745
 
 [node name="Collider" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-3.3125, 7.25)
+position = Vector2(-3.30622, 0.999095)
+rotation = -0.00251191
 shape = SubResource("RectangleShape2D_whux2")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
@@ -190,3 +189,8 @@ volume_db = -25.0
 [node name="LandingSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_vib58")
 volume_db = -25.0
+
+[node name="DeathSensor" type="RayCast2D" parent="."]
+position = Vector2(-3.3125, -1.5)
+rotation = -0.00251191
+target_position = Vector2(45, 0)

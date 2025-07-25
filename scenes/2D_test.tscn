@@ -76,10 +76,10 @@ modulate = Color(0.705738, 0, 0.174622, 1)
 position = Vector2(-27.4824, -6.94571)
 texture = ExtResource("2_6jlpp")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(100.769, 597.331)
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(100.769, 592.99)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 position = Vector2(0, 2.60461)
 shape = SubResource("WorldBoundaryShape2D_c4gww")
 

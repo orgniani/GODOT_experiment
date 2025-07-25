@@ -187,7 +187,7 @@ texture = ExtResource("2_uysv2")
 sources/1 = SubResource("TileSetAtlasSource_p5fd0")
 sources/0 = SubResource("TileSetAtlasSource_f5uq3")
 
-[node name="ParallaxBackground" type="ParallaxBackground"]
+[node name="ParallaxBackground2" type="ParallaxBackground"]
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
 position = Vector2(0, 113)
@@ -206,6 +206,7 @@ tile_map_data = PackedByteArray("AABKABUAAAAEAAMAAABKAB0AAAADAAAAAABKAB4AAAADAAE
 tile_set = SubResource("TileSet_pgtno")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+visible = false
 position = Vector2(0, 113)
 motion_mirroring = Vector2(2000, 0)
 
@@ -214,6 +215,7 @@ tile_map_data = PackedByteArray("AAAJACYAAAAAAAEAAAAKACYAAAACAAEAAAALACYAAAAAAAE
 tile_set = SubResource("TileSet_v3xmg")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+visible = false
 position = Vector2(0, 113)
 motion_mirroring = Vector2(2000, 0)
 
