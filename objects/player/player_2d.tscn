@@ -1,8 +1,9 @@
-[gd_scene load_steps=30 format=3 uid="uid://bhtein0chknfn"]
+[gd_scene load_steps=28 format=3 uid="uid://bhtein0chknfn"]
 
 [ext_resource type="Script" uid="uid://dyev7s6xi0tnq" path="res://scripts/player_2d.gd" id="1_1stpw"]
 [ext_resource type="AudioStream" uid="uid://b4x0f4pgfifoo" path="res://audio/sounds/robot_jump.wav" id="2_60go1"]
 [ext_resource type="Texture2D" uid="uid://cgbxoad4kpljg" path="res://art/sprites/skeleton.png" id="2_522jx"]
+[ext_resource type="Texture2D" uid="uid://ur231ymt6d64" path="res://art/sprites/skeleton_jump_2.png" id="3_llsru"]
 [ext_resource type="AudioStream" uid="uid://bhoyegbjust84" path="res://audio/sounds/robot_land.wav" id="3_vib58"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_llsru"]
@@ -22,32 +23,20 @@ atlas = ExtResource("2_522jx")
 region = Rect2(192, 189, 64, 63)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wwlbj"]
-atlas = ExtResource("2_522jx")
-region = Rect2(0, 315, 64, 63)
+atlas = ExtResource("3_llsru")
+region = Rect2(0, 0, 64, 66)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hyyfa"]
-atlas = ExtResource("2_522jx")
-region = Rect2(64, 315, 64, 63)
+atlas = ExtResource("3_llsru")
+region = Rect2(64, 0, 64, 66)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hcmil"]
-atlas = ExtResource("2_522jx")
-region = Rect2(128, 315, 64, 63)
+atlas = ExtResource("3_llsru")
+region = Rect2(128, 0, 64, 66)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pq6xh"]
-atlas = ExtResource("2_522jx")
-region = Rect2(192, 315, 64, 63)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_74iko"]
-atlas = ExtResource("2_522jx")
-region = Rect2(256, 315, 64, 63)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a4yrx"]
-atlas = ExtResource("2_522jx")
-region = Rect2(320, 315, 64, 63)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y12g6"]
-atlas = ExtResource("2_522jx")
-region = Rect2(384, 315, 64, 63)
+atlas = ExtResource("3_llsru")
+region = Rect2(192, 0, 64, 66)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6g8p"]
 atlas = ExtResource("2_522jx")
@@ -128,15 +117,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pq6xh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_74iko")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a4yrx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y12g6")
 }],
 "loop": true,
 "name": &"jump",
@@ -194,11 +174,12 @@ script = ExtResource("1_1stpw")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_6wmvf")
-animation = &"run"
+animation = &"jump"
 autoplay = "idle"
-frame_progress = 0.771418
+frame_progress = 0.462745
 
 [node name="Collider" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-3.3125, 7.25)
 shape = SubResource("RectangleShape2D_whux2")
 
