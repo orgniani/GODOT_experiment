@@ -7,6 +7,10 @@ var amnt = 30
 var offset = 200
 var initObs = 0
 
+func _ready():
+	for n in amnt:
+		spawn_module(n * offset)
+		
 func spawn_module(x_position: float):
 	if initObs > 5:
 		rng.randomize()

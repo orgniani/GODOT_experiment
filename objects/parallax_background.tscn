@@ -187,7 +187,7 @@ texture = ExtResource("2_uysv2")
 sources/1 = SubResource("TileSetAtlasSource_p5fd0")
 sources/0 = SubResource("TileSetAtlasSource_f5uq3")
 
-[node name="ParallaxBackground2" type="ParallaxBackground"]
+[node name="ParallaxBackground" type="ParallaxBackground"]
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
 position = Vector2(0, 113)

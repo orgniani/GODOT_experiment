@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://p71xwawyruxj"]
 
 [ext_resource type="ArrayMesh" uid="uid://cgqmvb4gnajoc" path="res://art/models/module1.obj" id="1_6t1lb"]
-[ext_resource type="Script" uid="uid://bdy41y71f0mir" path="res://scripts/module.gd" id="1_0654s"]
+[ext_resource type="Script" uid="uid://bdy41y71f0mir" path="res://scripts/module3D.gd" id="1_0654s"]
 [ext_resource type="Material" uid="uid://b84cwv5kxjjqs" path="res://art/materials/grey.tres" id="2_xc26p"]
 [ext_resource type="ArrayMesh" uid="uid://csvkpe64e5nqi" path="res://art/models/floor_tile_large.obj" id="4_dbups"]
 [ext_resource type="Texture2D" uid="uid://dcj3pifh1e8is" path="res://art/models/dungeon_texture.png" id="5_kvhrd"]

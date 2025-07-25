@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=4 uid="uid://b30ad0ufqg4qi"]
+[gd_scene load_steps=10 format=4 uid="uid://b30ad0ufqg4qi"]
 
+[ext_resource type="Script" uid="uid://dtb1q11jdbm76" path="res://scripts/module2D.gd" id="1_ub7td"]
 [ext_resource type="Texture2D" uid="uid://ojg0ilsuyusn" path="res://objects/level/Tileset/Starter Tiles - Platformer/Starter Tiles Platformer/DarkCastle.png" id="2_kmvdy"]
 [ext_resource type="Texture2D" uid="uid://yj8qedt701xk" path="res://objects/level/Tileset/Starter Tiles - Platformer/Starter Tiles Platformer/Swampset.png" id="3_g64gu"]
 [ext_resource type="Texture2D" uid="uid://c5qsw1w1l2trb" path="res://objects/level/Tileset/Starter Tiles - Platformer/Starter Tiles Platformer/BasicGreen.png" id="4_o2iyh"]
@@ -113,21 +114,16 @@ texture = ExtResource("2_kmvdy")
 sources/1 = SubResource("TileSetAtlasSource_p5fd0")
 sources/0 = SubResource("TileSetAtlasSource_f5uq3")
 
-[node name="Module5" type="ParallaxBackground"]
+[node name="Module5" type="Node2D"]
+script = ExtResource("1_ub7td")
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(0, 113)
-motion_mirroring = Vector2(2000, 0)
-
-[node name="TileMapLayer" type="TileMapLayer" parent="ParallaxLayer3"]
 tile_map_data = PackedByteArray("AAD+/yMAAAAEAAIAAAD+/yIAAAAAAAMAAAD+/yEAAAAAAAMAAAD+/yAAAAAAAAMAAAD+/x8AAAAAAAMAAAD+/x4AAAAAAAMAAAD+/x0AAAAAAAMAAAD+/xwAAAAAAAMAAAD+/xsAAAAAAAMAAAD+/xoAAAAAAAMAAAD+/xkAAAAAAAMAAAD+/xgAAAAAAAMAAAADACMAAAAEAAIAAAADACIAAAAAAAMAAAADACEAAAAAAAMAAAADACAAAAAAAAMAAAADAB8AAAAAAAMAAAADAB4AAAAAAAMAAAADAB0AAAAAAAMAAAADABwAAAAAAAMAAAADABsAAAAAAAMAAAADABoAAAAAAAMAAAADABkAAAAAAAMAAAADABgAAAAAAAMAAAADABcAAAAAAAMAAAADABYAAAAAAAMAAAADABUAAAAAAAMAAAADABQAAAAAAAMAAAADABMAAAAAAAMAAAAEACMAAAAAAAIAAAACACMAAAABAAIAAAABACMAAAABAAIAAAAAACMAAAABAAIAAAD//yMAAAABAAIAAAD//yQAAAABAAIAAAADABIAAAADAAMAAAD+/xcAAAADAAMAAAACABIAAAAEAAMAARD9/xcAAAAEAAMAARAEABIAAAAEAAMAAAD//xcAAAAEAAMAAAADABEAAAAAAAIAAAD+/xYAAAAAAAIAAAAEABEAAAACAAIAAAD//xYAAAACAAIAAAD9/xYAAAACAAIAABACABEAAAACAAIAABA=")
 tile_set = SubResource("TileSet_v3xmg")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+[node name="Foreground" type="TileMapLayer" parent="."]
 position = Vector2(0, 113)
-motion_mirroring = Vector2(2000, 0)
-
-[node name="Foreground" type="TileMapLayer" parent="ParallaxLayer"]
 scale = Vector2(1.20077, 1.15179)
 tile_map_data = PackedByteArray("AAD+/x8AAAAAAAIAAAD+/yAAAAABAAIAAAD+/yEAAAABAAIAAAD+/yIAAAACAAIAAAD+/yMAAAABAAIAAAD+/yQAAAABAAIAAAD//x8AAAAAAAIAAAD//yAAAAACAAIAAAD//yEAAAABAAIAAAD//yIAAAACAAIAAAD//yMAAAACAAIAAAD//yQAAAABAAIAAAAAAB8AAAAAAAIAAAAAACAAAAABAAIAAAAAACEAAAABAAIAAAAAACIAAAABAAIAAAAAACMAAAACAAIAAAAAACQAAAABAAIAAAABAB8AAAAAAAIAAAABACAAAAABAAIAAAABACEAAAACAAIAAAABACIAAAACAAIAAAABACMAAAACAAIAAAABACQAAAABAAIAAAACAB8AAAAAAAIAAAACACAAAAABAAIAAAACACEAAAACAAIAAAACACIAAAABAAIAAAACACMAAAABAAIAAAACACQAAAABAAIAAAADAB8AAAAAAAIAAAADACAAAAABAAIAAAADACEAAAABAAIAAAADACIAAAABAAIAAAADACMAAAACAAIAAAADACQAAAABAAIAAAA=")
 tile_set = SubResource("TileSet_5ua4s")
