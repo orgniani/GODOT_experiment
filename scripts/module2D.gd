@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var level = $"../"  # Assuming parent is the level spawner
+@onready var level = $"../"
 var speed = 200  # pixels per second
 
 func _physics_process(delta):
