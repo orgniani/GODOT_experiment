@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://ba6jp30ia4nhx"]
+[gd_scene load_steps=15 format=4 uid="uid://ba6jp30ia4nhx"]
 
 [ext_resource type="Script" uid="uid://dtb1q11jdbm76" path="res://scripts/module2D.gd" id="1_d6t3c"]
 [ext_resource type="Texture2D" uid="uid://ojg0ilsuyusn" path="res://objects/level/Tileset/Starter Tiles - Platformer/Starter Tiles Platformer/DarkCastle.png" id="2_7nrbl"]
@@ -117,6 +117,9 @@ texture = ExtResource("2_7nrbl")
 sources/1 = SubResource("TileSetAtlasSource_p5fd0")
 sources/0 = SubResource("TileSetAtlasSource_f5uq3")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kb7p8"]
+size = Vector2(160, 192)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ek6jp"]
 animations = [{
 "frames": [{
@@ -147,6 +150,14 @@ tile_map_data = PackedByteArray("AAAAAB8AAAAAAAIAAAAAACAAAAABAAIAAAAAACEAAAABAAI
 tile_set = SubResource("TileSet_5ua4s")
 collision_enabled = false
 
+[node name="FloorCollision" type="StaticBody2D" parent="Foreground"]
+position = Vector2(83, 592)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foreground/FloorCollision"]
+position = Vector2(-3, 0)
+shape = SubResource("RectangleShape2D_kb7p8")
+
 [node name="Obstacle" parent="." instance=ExtResource("5_omqak")]
 position = Vector2(127, 481)
 
@@ -154,7 +165,7 @@ position = Vector2(127, 481)
 visible = false
 
 [node name="CollisionShape2D" parent="Obstacle" index="1"]
-position = Vector2(-2, 6)
+position = Vector2(-2, 0)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Obstacle"]
 position = Vector2(0, -8)

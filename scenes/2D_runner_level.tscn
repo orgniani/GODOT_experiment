@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2t3wxtf2uc4u" path="res://scripts/scenes/2D_level.gd" id="2_ai7ar"]
 [ext_resource type="PackedScene" uid="uid://d3ak3g7rlvofo" path="res://objects/modules/2D/module1.tscn" id="2_wk7l2"]
+[ext_resource type="PackedScene" uid="uid://deerciwu2tdqv" path="res://objects/modules/2D/module6.tscn" id="3_2ey3t"]
 [ext_resource type="PackedScene" uid="uid://b7s8cf25j6fky" path="res://objects/parallax_background.tscn" id="3_ai7ar"]
 [ext_resource type="PackedScene" uid="uid://ba6jp30ia4nhx" path="res://objects/modules/2D/module2.tscn" id="3_cqal1"]
 [ext_resource type="PackedScene" uid="uid://cjuoj1tr7c6ue" path="res://objects/modules/2D/module3.tscn" id="4_3hnyu"]
@@ -9,25 +10,15 @@
 [ext_resource type="PackedScene" uid="uid://bhtein0chknfn" path="res://objects/player/player_2d.tscn" id="5_wk7l2"]
 [ext_resource type="PackedScene" uid="uid://b30ad0ufqg4qi" path="res://objects/modules/2D/module5.tscn" id="6_6l7v8"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c4gww"]
-
 [node name="main" type="Node2D"]
 scale = Vector2(1.20077, 1.15179)
 
 [node name="Level" type="Node2D" parent="." node_paths=PackedStringArray("background")]
 script = ExtResource("2_ai7ar")
-modules = Array[PackedScene]([ExtResource("2_wk7l2"), ExtResource("3_cqal1"), ExtResource("4_3hnyu"), ExtResource("5_84lja"), ExtResource("6_6l7v8")])
+modules = Array[PackedScene]([ExtResource("2_wk7l2"), ExtResource("3_cqal1"), ExtResource("4_3hnyu"), ExtResource("5_84lja"), ExtResource("6_6l7v8"), ExtResource("3_2ey3t")])
 background = NodePath("../Background")
 
 [node name="Background" parent="." instance=ExtResource("3_ai7ar")]
-
-[node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2(100, 495)
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2(0, 2.60461)
-shape = SubResource("WorldBoundaryShape2D_c4gww")
 
 [node name="Player2D" parent="." instance=ExtResource("5_wk7l2")]
 position = Vector2(80.7815, 464.494)
